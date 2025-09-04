@@ -1,0 +1,185 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;            
+    background: linear-gradient(135deg, #4a90e2, #357ABD);
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.header-image {
+    width: 150px;      
+    height: auto;      
+    border-radius: 50%; 
+    margin-top: 20px;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+
+section {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #357ABD;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+#about-me p {
+    font-size: 1.1rem;
+    text-align: justify;
+    margin-bottom: 12px;
+}
+
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project {
+    max-width: 900px; 
+    margin: 0 auto;   
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background: #fdfdfd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+@media (max-width: 768px) {
+    #projects {
+        display: grid;
+        grid-template-columns: 1fr; /* jedan po jedan */
+        gap: 20px;
+    }
+
+    .project {
+        padding: 15px;
+        max-width: 100%; /* full width na mobitelu */
+    }
+}
+
+.project h3 {
+    color: #4a90e2;
+    margin-bottom: 12px;
+}
+
+.project p {
+    margin-bottom: 10px;
+}
+
+.project a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 25px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+
+@media (max-width: 768px) {
+    .header-image {
+        width: 120px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    section {
+        padding: 20px;
+        margin: 25px 15px;
+    }
+
+    .project {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .header-image {
+        width: 100px;
+    }
+
+    .project h3 {
+        font-size: 1.1rem;
+    }
+
+    #about-me p {
+        font-size: 1rem;
+    }
+}
